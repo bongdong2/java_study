@@ -25,20 +25,18 @@ public class Main {
 
         // BookPredicate인터페이스를 구현하는 별도의 클래스를 만들어 사용
         List<Book> books1 = collectBook(bookList, new BookPricePredicate(12000));
-        System.out.println("===============book1===============");
+        System.out.println("========== implements interface =========");
         for(Book book : books1){
             System.out.println(book.toString());
         }
-        System.out.println("===============book1===============");
         System.out.println();
         System.out.println();
 
         List<Book> books2 = collectBook(bookList, new BookTypePredicate("history"));
-        System.out.println("===============book2===============");
         for(Book book : books2){
             System.out.println(book.toString());
         }
-        System.out.println("===============book2===============");
+        System.out.println("==========================================");
         System.out.println();
         System.out.println();
 
@@ -50,11 +48,10 @@ public class Main {
             }
         });
 
-        System.out.println("===============book3===============");
+        System.out.println("============= anonyous class ==============");
         for(Book book : book3) {
             System.out.println(book.toString());
         }
-        System.out.println("===============book3===============");
         System.out.println();
         System.out.println();
 
@@ -64,30 +61,29 @@ public class Main {
                 return "history".equals(book.getType());
             }
         });
-        System.out.println("===============book4===============");
+
         for(Book book : book4) {
             System.out.println(book.toString());
         }
-        System.out.println("===============book4===============");
+        System.out.println("============================================");
         System.out.println();
         System.out.println();
 
+
         // 람다표현식 사용
         List<Book> book5 = collectBook(bookList, (Book book) -> book.getPrice() < 11000);
-        System.out.println("===============book5===============");
+        System.out.println("============= lambda expression ============");
         for(Book book : book5) {
             System.out.println(book.toString());
         }
-        System.out.println("===============book5===============");
         System.out.println();
         System.out.println();
 
         List<Book> book6 = collectBook(bookList, (Book book) -> "history".equals(book.getType()));
-        System.out.println("===============book6===============");
         for(Book book : book6) {
             System.out.println(book.toString());
         }
-        System.out.println("===============book6===============");
+        System.out.println("=============================================");
         System.out.println();
         System.out.println();
     }

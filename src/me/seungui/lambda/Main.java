@@ -1,6 +1,4 @@
-package me.seungui;
-
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+package me.seungui.lambda;
 
 import java.util.ArrayList;
 import java.util.Arrays;

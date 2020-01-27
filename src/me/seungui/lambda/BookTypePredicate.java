@@ -1,4 +1,4 @@
-package me.seungui;
+package me.seungui.lambda;
 
 public class BookTypePredicate implements BookPredicate {
 

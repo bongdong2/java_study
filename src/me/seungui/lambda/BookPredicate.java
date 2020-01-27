@@ -1,4 +1,4 @@
-package me.seungui;
+package me.seungui.lambda;
 
 @FunctionalInterface
 public interface BookPredicate {

@@ -12,6 +12,21 @@ public class Employee implements Person, Identified, Comparable<Employee> {
         this.salary = salary;
     }
 
+    public Employee(String name, double salary) {
+        this.name = name;
+        this.salary = salary;
+    }
+
+    public Employee(double salary) {
+        this.name = "";
+        this.salary = salary;
+    }
+
+    public Employee(String name) {
+        // salary automatically set to zero
+        this.name = name;
+    }
+
     public void setName(String name) {
         this.name = name;
     }

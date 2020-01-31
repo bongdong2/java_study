@@ -3,6 +3,7 @@ package me.seungui.javainterface;
 import java.awt.*;
 import java.util.*;
 import java.util.List;
+import java.util.stream.Stream;
 
 import static me.seungui.javainterface.IntSequence.average;
 
@@ -97,11 +98,21 @@ public class Main {
 
         System.out.println("===============================");
 
-        System.out.println("======Runnable interface=====");
+        /*System.out.println("======Runnable interface=====");
         HelloTask helloTask = new HelloTask();
         Thread thread = new Thread(helloTask);
         thread.start();
         System.out.println("===============================");
 
+        System.out.println("====== lambda expression =====");
+        Runnable task = () -> { for (int i = 0; i < 1000; i ++) System.out.println("Hello"); };
+        Thread t2 = new Thread(task);
+        t2.start();
+        System.out.println("===============================");*/
+
+        //empList.removeIf(x -> Objects.isNull(x));
+        empList.removeIf(Objects::isNull);
+        //empList.forEach(x -> System.out.println(x));
+        empList.forEach(System.out::println);
     }
 }

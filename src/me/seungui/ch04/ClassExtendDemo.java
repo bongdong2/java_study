@@ -3,7 +3,24 @@ package me.seungui.ch04;
 public class ClassExtendDemo {
 
     public static void main(String[] args) {
-        System.out.println("==============================================");
+
+        // Manager 객체를 Employee 변수에 할당하는 이유는 모든 직원에 동작하는 코드를 작성할 수 있기 때문
+        Employee[] staff = new Employee[4];
+        staff[0] = new Employee("seungui", 2400);
+        staff[1] = new Employee("jwa", 2800);
+        staff[2] = new Employee("bongdong", 3300);
+        staff[3] = new Manager("buminseok", 600);
+
+        Manager temp = (Manager)staff[3];
+        temp.setBonus(10);
+
+        double sum = 0;
+        for(Employee em : staff) {
+            System.out.println("name: " + em.getName() + ", salary : " + em.getSalary());
+        }
+
+        // ======================================================================================
+        /*System.out.println("==============================================");
         MagicGoblin magicGoblin = new MagicGoblin("uuuueeee", 100, 25);
         magicGoblin.levelup();
         System.out.println(magicGoblin.toString());
@@ -15,7 +32,8 @@ public class ClassExtendDemo {
         basicGoblin.levelup();
         System.out.println("basicGoblin HP : " + basicGoblin.getHp());
         basicGoblin.attack();
-        System.out.println(basicGoblin.toString());
+        System.out.println(basicGoblin.toString());*/
+        // ======================================================================================
     }
 }
 

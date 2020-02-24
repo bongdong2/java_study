@@ -1,6 +1,6 @@
 package me.seungui.ch04;
 
-public class Employee {
+public class Employee implements Cloneable {
     private String name;
     private double salary;
 
@@ -20,5 +20,15 @@ public class Employee {
 
     public double getSalary() {
         return salary;
+    }
+
+    public String toString() {
+        return getClass().getName() + "[name=" + name
+            + ",salary=" + salary + "]";
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }

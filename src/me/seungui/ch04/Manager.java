@@ -15,4 +15,8 @@ public class Manager extends Employee {
     public double getSalary() { // Overrides superclass method
         return super.getSalary() + bonus;
     }
+
+    public String toString() {
+        return super.toString() + "[bonus=" + bonus + "]";
+    }
 }
